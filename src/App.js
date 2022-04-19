@@ -1,6 +1,16 @@
+import './app.css'
+
 function Booklist() {
   return (
-    <div>
+    <div className='book-list'>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
       <Book />
     </div>
   )
@@ -8,7 +18,7 @@ function Booklist() {
 
 const Book = () => {
   return (
-    <article>
+    <article className='book'>
       <Image></Image>
       <Title></Title>
       <Author></Author>
@@ -25,6 +35,10 @@ const Image = () => (
 
 const Title = () => <h1>The Very Hungry Caterpillar</h1>
 
-const Author = () => <h2>Eric Carle </h2>
+const Author = () => (
+  <h2 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem' }}>
+    Eric Carle{' '}
+  </h2>
+)
 
 export default Booklist
