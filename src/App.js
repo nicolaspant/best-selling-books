@@ -4,41 +4,26 @@ function Booklist() {
   return (
     <div className='book-list'>
       <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
     </div>
   )
 }
 
 const Book = () => {
+  const title = 'The Very Hungry Caterpillar'
+  const author = 'Eric Carle'
+  const image = ''
   return (
     <article className='book'>
-      <Image></Image>
-      <Title></Title>
-      <Author></Author>
+      <img
+        src='https://images-na.ssl-images-amazon.com/images/I/91vnzZO5yPL._AC_UL604_SR604,400_.jpg'
+        alt=''
+      />
+
+      <h1>{title}</h1>
+
+      <h4>{author.toUpperCase()}</h4>
     </article>
   )
 }
-
-const Image = () => (
-  <img
-    src='https://images-na.ssl-images-amazon.com/images/I/91vnzZO5yPL._AC_UL604_SR604,400_.jpg'
-    alt=''
-  />
-)
-
-const Title = () => <h1>The Very Hungry Caterpillar</h1>
-
-const Author = () => (
-  <h2 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.25rem' }}>
-    Eric Carle{' '}
-  </h2>
-)
 
 export default Booklist
